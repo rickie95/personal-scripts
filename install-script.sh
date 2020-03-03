@@ -5,6 +5,7 @@ is_exec(){
 }
 
 if is_exec "git"; then
+    cd ~
     git clone $REPO ~/.personal-scripts
     cp "~/.personal-scripts/dotfiles/.zshrc" ~
 else
