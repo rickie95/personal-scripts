@@ -5,7 +5,7 @@ is_exec(){
 }
 
 if is_exec "git"; then
-    git $REPO ~/.personal-scripts
+    git clone $REPO ~/.personal-scripts
     cp "~/.personal-scripts/dotfiles/.zshrc" ~
 else
     echo "Git is not available, check if it's installed"
