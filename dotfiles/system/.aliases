@@ -1,0 +1,7 @@
+# Arch based
+alias arch-update="sudo pacman -Syu"
+
+# Ubuntu/Debian
+alias ubuntu-update="sudo apt update && apt list --upgradable"
+alias ubuntu-upgrade="sudo apt upgrade"
+
