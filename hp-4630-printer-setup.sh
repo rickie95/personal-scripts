@@ -1,7 +1,14 @@
 #!/bin/bash
 
 #Install CUPS
-sudo pacman -Sy cups
+if [ -f /bin/apt ]; then 
+  sudo apt install cups        
+elif [ -f /bin/pacman ]; then 
+  sudo pacman -Sy cups
+else
+  echo "Both apt nor pacman were not found."
+  exit -1
+fi
 
 # Enable cups daemon 
 
